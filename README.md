@@ -1,12 +1,12 @@
 # TaskGen
 
 An end-to-end **LLM-powered task generation pipeline** for robotic manipulation:  
-**assets → registries → GPT task spec → (optional) HumanCheck layout → outputs**
+**assets → registries → GPT task spec → HumanCheck layout → outputs**
 
 TaskGen is designed to:
-- Manage and register assets (rigid + articulated) into `taskgen_json/` registries.
-- Generate manipulation tasks (**JSON + PKL + Python task class**), optionally **human-check** layouts in a UI.
-- Support multiple LLM providers (OpenAI / DeepSeek / custom OpenAI-compatible endpoints).
+- Manage and register assets into `taskgen_json/` registries.
+- Generate manipulation tasks in **JSON + PKL + Python task class**, optionally **human-check** layouts in a UI.
+- Support multiple LLM providers such as OpenAI, DeepSeek etc.
 
 All model-provider configuration is centralized in:
 `taskgen/model_api.py`.
@@ -70,11 +70,11 @@ cd Axis_Task_Gen
 TaskGen uses the OpenAI Python SDK for chat-completions, but the provider is selected via
 `taskgen/model_api.py` and/or environment variables.
 
-**Generic override** (works for any OpenAI-compatible base URL):
+**Generic override**, works for any OpenAI-compatible base URL:
 
 ```bash
 export MODEL_API_KEY="..."
-export MODEL_BASE_URL="https://api.openai.com/v1"   # or your custom endpoint
+export MODEL_BASE_URL="https://api.openai.com/v1"   # or yourV custom endpoint
 export MODEL_MODEL="gpt-4o-2024-08-06"              # or "deepseek-chat"
 ```
 
@@ -148,7 +148,7 @@ export DEEPSEEK_MODEL="deepseek-chat"
 
 ## Assets
 
-### Asset folder format (standard)
+### Asset folder format
 
 TaskGen expects each asset to follow this layout:
 
