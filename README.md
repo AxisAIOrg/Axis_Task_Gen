@@ -67,7 +67,7 @@ https://github.com/user-attachments/assets/9ae8e142-f709-42bd-a932-74b6055dcdab
 ### 1) Clone
 ```bash
 git clone <repo-url>
-cd Axis_Task_Gen
+cd AxisTaskGen
 ```
 
 ### 2) Configure model provider (env recommended)
