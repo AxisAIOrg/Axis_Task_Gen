@@ -42,6 +42,13 @@ TaskGen is designed to:
 
 All model-provider configuration is centralized in `taskgen/model_api.py`.
 
+### Demo
+
+<video width="100%" controls>
+  <source src="assets/demo/taskgen_pipeline.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### Core Pipeline
 
 1) **Prepare assets** - Register assets into `taskgen_json/` and adjust initial poses if needed.
