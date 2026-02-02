@@ -1,24 +1,19 @@
-# TaskGen
+<div align="center">
 
-An end-to-end **LLM-powered task generation pipeline** for robotic manipulation:  
+# AxisTaskGen
+
+An end-to-end **LLM-powered task generation pipeline** for robotic manipulation  
 **assets → registries → GPT task spec → HumanCheck layout → outputs**
 
-TaskGen is designed to:
-- Manage and register assets into `taskgen_json/` registries.
-- Generate manipulation tasks in **JSON + PKL + Python task class**, optionally **human-check** layouts in a UI.
-- Support multiple LLM providers such as OpenAI, DeepSeek etc.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org)
+[![OpenAI](https://img.shields.io/badge/OpenAI-LLM-green)](https://openai.com)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-All model-provider configuration is centralized in:
-`taskgen/model_api.py`.
+[Quick Start](#quick-start) • [Docs](#table-of-contents) • [Core Scripts](#core-scripts) • [File Structure](#file-structure)
 
+</div>
 
-<!-- ## Demo
-
-> Add your videos here (recommended: GIF/MP4 + short captions)
-- **Demo 1:** Task generation workflow
-- **Demo 2:** HumanCheck layout adjust
-- **Demo 3:** Asset registry + pose adjustment -->
-
+---
 
 ## Table of Contents
 
@@ -40,20 +35,19 @@ All model-provider configuration is centralized in:
 
 ## Overview
 
-TaskGen provides a practical pipeline to author runnable manipulation tasks using LLMs.
+TaskGen is designed to:
+- Manage and register assets (rigid + articulated) into `taskgen_json/` registries.
+- Generate manipulation tasks in **JSON + PKL + Python task class**, optionally **human-check** layouts in a UI.
+- Support multiple LLM providers (OpenAI, DeepSeek, custom OpenAI-compatible endpoints).
 
-1) **Prepare assets**
-   - Register assets into `taskgen_json/` so the task generator can use them.
-   - Adjust asset initial poses if needed.
+All model-provider configuration is centralized in `taskgen/model_api.py`.
 
-2) **Generate tasks**
-   - Use `gpt_gen.py` to create a task spec and initial layout.
+### Core Pipeline
 
-3) **HumanCheck (optional)**
-   - Use `gpt_layout_adjust.py` to launch a manual layout tool and save corrected poses.
-
-4) **Integrate & Use**
-   - Use the generated task files in your simulation environment.
+1) **Prepare assets** - Register assets into `taskgen_json/` and adjust initial poses if needed.
+2) **Generate tasks** - Use `gpt_gen.py` to create a task spec and initial layout.
+3) **HumanCheck (optional)** - Use `gpt_layout_adjust.py` to manually adjust object positions.
+4) **Integrate & Use** - Use the generated task files in your simulation environment.
 
 ---
 
@@ -280,3 +274,19 @@ Axis_Task_Gen/
 * If you see auth/provider issues, check:
   * `taskgen/model_api.py`
   * Your env vars (`MODEL_*`, `OPENAI_*`, `DEEPSEEK_*`)
+
+---
+
+## 🔗 License
+
+This project is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
+
+<div align="center">
+
+[Back to Top](#taskgen)
+
+---
+
+Built for robotic task generation and AI-powered automation
+
+</div>
