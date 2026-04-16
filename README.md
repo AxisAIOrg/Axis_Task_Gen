@@ -30,6 +30,7 @@ An end-to-end **LLM-powered task generation pipeline** for robotic manipulation
 - [Outputs](#outputs)
 - [File Structure](#file-structure)
 - [Notes / Dependencies](#notes--dependencies)
+- [Acknowledgement](#acknowledgement)
 
 ---
 
@@ -285,6 +286,12 @@ Axis_Task_Gen/
 * If you see auth/provider issues, check:
   * `taskgen/model_api.py`
   * Your env vars (`MODEL_*`, `OPENAI_*`, `DEEPSEEK_*`)
+
+---
+
+## Acknowledgement
+
+This project is built upon [RoboVerse](https://roboverse.wiki/). We gratefully acknowledge the RoboVerse project and its contributors for providing the foundational infrastructure that made this work possible.
 
 ---
 
